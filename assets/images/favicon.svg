@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff2745" />
+      <stop offset="50%" stop-color="#1f2745" />
+      <stop offset="100%" stop-color="#3ec5ff" />
+    </linearGradient>
+    <linearGradient id="grid" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="rgba(255,255,255,0.75)" />
+      <stop offset="100%" stop-color="rgba(255,255,255,0.25)" />
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="12" fill="#05070f" />
+  <path d="M32 6l18 8v12c0 13.25-9.25 25.44-18 32-8.75-6.56-18-18.75-18-32V14z" fill="url(#grad)" stroke="#0b1120" stroke-width="2" />
+  <path d="M22 30h20M26 22h12M26 38h12" stroke="url(#grid)" stroke-width="2" stroke-linecap="round" opacity="0.6" />
+  <circle cx="24" cy="30" r="2.2" fill="#3ec5ff" />
+  <circle cx="40" cy="22" r="2.2" fill="#ff2745" />
+  <circle cx="40" cy="38" r="2.2" fill="#45f9a1" />
+  <circle cx="32" cy="46" r="3" fill="#0b1120" stroke="#3ec5ff" stroke-width="1.5" />
+  <path d="M32 18v24" stroke="rgba(255,255,255,0.4)" stroke-width="1.2" stroke-linecap="round" />
+</svg>

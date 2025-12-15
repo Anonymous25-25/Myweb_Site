@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Articles - CyberGuard</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <i class="fas fa-shield-alt"></i>
+                <span>CyberGuard</span>
+            </div>
+            <button class="nav-toggle" id="navToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/static/pages/articles.html" class="active">Articles</a></li>
+                <li><a href="/static/pages/tools.html">Tools</a></li>
+                <li><a href="/static/pages/portfolio.html">Portfolio</a></li>
+                <li><a href="/static/pages/dashboard.html">Dashboard</a></li>
+                <li><a href="/static/pages/gallery.html">Gallery</a></li>
+                <li><a href="/static/pages/about.html">About</a></li>
+                <li><a href="/static/pages/contact.html">Contact</a></li>
+                <li><a href="/static/pages/login.html" class="btn-login">Login</a></li>
+                <li>
+                    <button class="theme-toggle" id="themeToggle" title="Toggle Theme">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1><i class="fas fa-newspaper"></i> Cybersecurity Articles</h1>
+            <p>Latest insights, tutorials, and news from the cybersecurity world</p>
+        </div>
+    </section>
+
+    <!-- Articles Section -->
+    <section class="articles-section">
+        <div class="container">
+            <div class="articles-grid-full">
+                <!-- Article 1 -->
+                <article class="article-card-full">
+                    <div class="article-image-full" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                        <i class="fas fa-shield-virus fa-4x"></i>
+                    </div>
+                    <div class="article-content-full">
+                        <div class="article-meta">
+                            <span class="article-tag">Security</span>
+                            <span class="article-date"><i class="fas fa-calendar"></i> Dec 8, 2024</span>
+                        </div>
+                        <h2>Zero-Day Vulnerabilities: Detection and Prevention</h2>
+                        <p>Zero-day vulnerabilities represent one of the most critical threats in modern cybersecurity. These are software vulnerabilities that are unknown to the software vendor and for which no patch exists. Attackers can exploit these vulnerabilities before they're discovered and fixed.</p>
+                        <p>In this comprehensive guide, we explore advanced techniques for detecting zero-day exploits, including behavioral analysis, anomaly detection, and machine learning approaches. We also discuss prevention strategies such as defense-in-depth, application whitelisting, and sandboxing technologies.</p>
+                        <div class="article-tags-list">
+                            <span><i class="fas fa-tag"></i> Zero-Day</span>
+                            <span><i class="fas fa-tag"></i> Vulnerability</span>
+                            <span><i class="fas fa-tag"></i> Detection</span>
+                        </div>
+                        <button class="btn btn-primary read-more-btn" onclick="toggleContent(this)">
+                            <i class="fas fa-book-open"></i> Read Full Article
+                        </button>
+                        <div class="article-full-content" style="display: none;">
+                            <h3>Understanding Zero-Day Attacks</h3>
+                            <p>A zero-day attack occurs when attackers exploit a vulnerability on the same day it becomes known to the software vendor, giving them "zero days" to fix it. These attacks are particularly dangerous because traditional signature-based security systems cannot detect them.</p>
+                            <h3>Detection Techniques</h3>
+                            <ul>
+                                <li><strong>Behavioral Analysis:</strong> Monitor for unusual system behavior patterns</li>
+                                <li><strong>Heuristic Detection:</strong> Identify suspicious code structures and execution patterns</li>
+                                <li><strong>Machine Learning:</strong> Use AI to detect anomalies in network traffic and system behavior</li>
+                                <li><strong>Sandboxing:</strong> Execute suspicious files in isolated environments</li>
+                            </ul>
+                            <h3>Prevention Strategies</h3>
+                            <p>Implementing a multi-layered security approach is crucial for protecting against zero-day attacks. This includes keeping all systems updated, implementing strict access controls, using application whitelisting, and maintaining comprehensive security monitoring.</p>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Article 2 -->
+                <article class="article-card-full">
+                    <div class="article-image-full" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                        <i class="fas fa-fingerprint fa-4x"></i>
+                    </div>
+                    <div class="article-content-full">
+                        <div class="article-meta">
+                            <span class="article-tag">Authentication</span>
+                            <span class="article-date"><i class="fas fa-calendar"></i> Dec 5, 2024</span>
+                        </div>
+                        <h2>Implementing Multi-Factor Authentication: A Complete Guide</h2>
+                        <p>Multi-Factor Authentication (MFA) has become essential for protecting user accounts and sensitive data. With password breaches becoming increasingly common, relying solely on passwords is no longer sufficient for securing access to critical systems.</p>
+                        <p>This article provides a comprehensive guide to implementing MFA in enterprise environments, covering different authentication factors, implementation strategies, and best practices for user adoption and security.</p>
+                        <div class="article-tags-list">
+                            <span><i class="fas fa-tag"></i> MFA</span>
+                            <span><i class="fas fa-tag"></i> Authentication</span>
+                            <span><i class="fas fa-tag"></i> Identity</span>
+                        </div>
+                        <button class="btn btn-primary read-more-btn" onclick="toggleContent(this)">
+                            <i class="fas fa-book-open"></i> Read Full Article
+                        </button>
+                        <div class="article-full-content" style="display: none;">
+                            <h3>Types of Authentication Factors</h3>
+                            <p>MFA combines two or more independent credentials from different categories:</p>
+                            <ul>
+                                <li><strong>Something You Know:</strong> Password, PIN, security questions</li>
+                                <li><strong>Something You Have:</strong> Mobile device, security token, smart card</li>
+                                <li><strong>Something You Are:</strong> Fingerprint, facial recognition, voice recognition</li>
+                                <li><strong>Somewhere You Are:</strong> GPS location, IP address verification</li>
+                            </ul>
+                            <h3>Implementation Best Practices</h3>
+                            <p>Successful MFA implementation requires careful planning, user education, and proper technical configuration. Consider user experience, provide multiple authentication options, and implement graceful fallback mechanisms for when primary methods fail.</p>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Article 3 -->
+                <article class="article-card-full">
+                    <div class="article-image-full" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                        <i class="fas fa-network-wired fa-4x"></i>
+                    </div>
+                    <div class="article-content-full">
+                        <div class="article-meta">
+                            <span class="article-tag">Network Security</span>
+                            <span class="article-date"><i class="fas fa-calendar"></i> Dec 2, 2024</span>
+                        </div>
+                        <h2>Advanced Network Threat Detection Techniques</h2>
+                        <p>Modern network attacks are increasingly sophisticated, using advanced techniques to evade traditional security measures. Understanding these threats and implementing robust detection mechanisms is crucial for maintaining network security.</p>
+                        <p>This article explores cutting-edge network threat detection techniques, including deep packet inspection, behavioral analytics, and AI-powered anomaly detection systems that can identify threats in real-time.</p>
+                        <div class="article-tags-list">
+                            <span><i class="fas fa-tag"></i> Network</span>
+                            <span><i class="fas fa-tag"></i> IDS/IPS</span>
+                            <span><i class="fas fa-tag"></i> Monitoring</span>
+                        </div>
+                        <button class="btn btn-primary read-more-btn" onclick="toggleContent(this)">
+                            <i class="fas fa-book-open"></i> Read Full Article
+                        </button>
+                        <div class="article-full-content" style="display: none;">
+                            <h3>Network Threat Landscape</h3>
+                            <p>Today's networks face threats ranging from DDoS attacks and man-in-the-middle attacks to advanced persistent threats (APTs) and ransomware. Each requires specific detection and mitigation strategies.</p>
+                            <h3>Detection Technologies</h3>
+                            <ul>
+                                <li><strong>SIEM Systems:</strong> Aggregate and analyze security events from multiple sources</li>
+                                <li><strong>Network Behavior Analysis:</strong> Establish baselines and detect deviations</li>
+                                <li><strong>Threat Intelligence:</strong> Leverage global threat data for proactive defense</li>
+                                <li><strong>Deception Technology:</strong> Deploy honeypots and honey tokens to detect attackers</li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Article 4 -->
+                <article class="article-card-full">
+                    <div class="article-image-full" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);">
+                        <i class="fas fa-bug fa-4x"></i>
+                    </div>
+                    <div class="article-content-full">
+                        <div class="article-meta">
+                            <span class="article-tag">Web Security</span>
+                            <span class="article-date"><i class="fas fa-calendar"></i> Nov 28, 2024</span>
+                        </div>
+                        <h2>OWASP Top 10: Web Application Security Vulnerabilities</h2>
+                        <p>The OWASP Top 10 represents the most critical security risks to web applications. Understanding these vulnerabilities and how to prevent them is essential for any organization developing or maintaining web applications.</p>
+                        <p>We dive deep into each of the OWASP Top 10 vulnerabilities, providing real-world examples, exploitation techniques, and comprehensive mitigation strategies to protect your web applications from common attacks.</p>
+                        <div class="article-tags-list">
+                            <span><i class="fas fa-tag"></i> OWASP</span>
+                            <span><i class="fas fa-tag"></i> Web Security</span>
+                            <span><i class="fas fa-tag"></i> Vulnerabilities</span>
+                        </div>
+                        <button class="btn btn-primary read-more-btn" onclick="toggleContent(this)">
+                            <i class="fas fa-book-open"></i> Read Full Article
+                        </button>
+                        <div class="article-full-content" style="display: none;">
+                            <h3>OWASP Top 10 Vulnerabilities (2021)</h3>
+                            <ol>
+                                <li><strong>Broken Access Control:</strong> Users can act outside their intended permissions</li>
+                                <li><strong>Cryptographic Failures:</strong> Inadequate protection of sensitive data</li>
+                                <li><strong>Injection:</strong> SQL, NoSQL, OS command, and LDAP injection attacks</li>
+                                <li><strong>Insecure Design:</strong> Missing or ineffective control design</li>
+                                <li><strong>Security Misconfiguration:</strong> Incomplete or insecure configuration</li>
+                            </ol>
+                            <h3>Prevention Measures</h3>
+                            <p>Implement secure coding practices, conduct regular security testing, use security frameworks, and maintain a security-focused development culture throughout your organization.</p>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Article 5 -->
+                <article class="article-card-full">
+                    <div class="article-image-full" style="background: linear-gradient(135deg, #30cfd0 0%, #330867 100%);">
+                        <i class="fas fa-lock fa-4x"></i>
+                    </div>
+                    <div class="article-content-full">
+                        <div class="article-meta">
+                            <span class="article-tag">Encryption</span>
+                            <span class="article-date"><i class="fas fa-calendar"></i> Nov 25, 2024</span>
+                        </div>
+                        <h2>Modern Encryption Standards: AES, RSA, and Beyond</h2>
+                        <p>Encryption is the foundation of modern cybersecurity, protecting data both in transit and at rest. Understanding different encryption algorithms, their strengths, and proper implementation is crucial for securing sensitive information.</p>
+                        <p>This comprehensive guide covers modern encryption standards including symmetric and asymmetric encryption, hashing algorithms, and emerging post-quantum cryptography solutions that will protect against future quantum computing threats.</p>
+                        <div class="article-tags-list">
+                            <span><i class="fas fa-tag"></i> Encryption</span>
+                            <span><i class="fas fa-tag"></i> Cryptography</span>
+                            <span><i class="fas fa-tag"></i> Data Protection</span>
+                        </div>
+                        <button class="btn btn-primary read-more-btn" onclick="toggleContent(this)">
+                            <i class="fas fa-book-open"></i> Read Full Article
+                        </button>
+                        <div class="article-full-content" style="display: none;">
+                            <h3>Symmetric vs Asymmetric Encryption</h3>
+                            <p><strong>Symmetric encryption</strong> uses the same key for encryption and decryption (e.g., AES-256). It's fast and efficient for large amounts of data but requires secure key distribution.</p>
+                            <p><strong>Asymmetric encryption</strong> uses a public-private key pair (e.g., RSA). The public key encrypts data, while only the private key can decrypt it. This solves the key distribution problem but is computationally expensive.</p>
+                            <h3>Best Practices</h3>
+                            <ul>
+                                <li>Use AES-256 for symmetric encryption of data at rest</li>
+                                <li>Implement TLS 1.3 for data in transit</li>
+                                <li>Use strong key derivation functions (KDFs) like PBKDF2 or Argon2</li>
+                                <li>Regularly rotate encryption keys</li>
+                                <li>Plan for post-quantum cryptography migration</li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Article 6 -->
+                <article class="article-card-full">
+                    <div class="article-image-full" style="background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);">
+                        <i class="fas fa-user-shield fa-4x"></i>
+                    </div>
+                    <div class="article-content-full">
+                        <div class="article-meta">
+                            <span class="article-tag">Social Engineering</span>
+                            <span class="article-date"><i class="fas fa-calendar"></i> Nov 20, 2024</span>
+                        </div>
+                        <h2>Defending Against Social Engineering Attacks</h2>
+                        <p>Social engineering remains one of the most effective attack vectors in cybersecurity. These attacks manipulate human psychology rather than technical vulnerabilities, making them particularly dangerous and difficult to prevent with technology alone.</p>
+                        <p>Learn how to recognize common social engineering tactics, implement security awareness training programs, and create a security-conscious culture that can effectively defend against these human-targeted attacks.</p>
+                        <div class="article-tags-list">
+                            <span><i class="fas fa-tag"></i> Social Engineering</span>
+                            <span><i class="fas fa-tag"></i> Phishing</span>
+                            <span><i class="fas fa-tag"></i> Awareness</span>
+                        </div>
+                        <button class="btn btn-primary read-more-btn" onclick="toggleContent(this)">
+                            <i class="fas fa-book-open"></i> Read Full Article
+                        </button>
+                        <div class="article-full-content" style="display: none;">
+                            <h3>Common Social Engineering Techniques</h3>
+                            <ul>
+                                <li><strong>Phishing:</strong> Fraudulent emails designed to steal credentials or install malware</li>
+                                <li><strong>Pretexting:</strong> Creating fake scenarios to gain trust and extract information</li>
+                                <li><strong>Baiting:</strong> Offering something enticing to trick users into compromising security</li>
+                                <li><strong>Tailgating:</strong> Following authorized personnel into restricted areas</li>
+                            </ul>
+                            <h3>Defense Strategies</h3>
+                            <p>Implement comprehensive security awareness training, use email filtering and authentication (SPF, DKIM, DMARC), establish verification procedures for sensitive requests, and conduct regular phishing simulations to test user awareness.</p>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <div class="footer-brand">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>CyberGuard</span>
+                    </div>
+                    <p>Professional cybersecurity solutions protecting organizations worldwide.</p>
+                    <div class="social-links">
+                        <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" title="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="#" title="Discord"><i class="fab fa-discord"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="/index.html">Home</a></li>
+                        <li><a href="/static/pages/articles.html">Articles</a></li>
+                        <li><a href="/static/pages/tools.html">Tools</a></li>
+                        <li><a href="/static/pages/portfolio.html">Portfolio</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="/static/pages/portfolio.html">Penetration Testing</a></li>
+                        <li><a href="/static/pages/tools.html">Security Audits</a></li>
+                        <li><a href="/static/pages/contact.html">Consulting</a></li>
+                        <li><a href="/static/pages/contact.html">Training</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> info@cyberguard.com</li>
+                        <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+                        <li><i class="fas fa-map-marker-alt"></i> San Francisco, CA</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 CyberGuard. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/static/js/main.js"></script>
+    <script src="/static/js/articles.js"></script>
+</body>
+</html>

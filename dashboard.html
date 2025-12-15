@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Black-Side-Security simulated dashboard showcasing operational security metrics and tooling." />
+  <title>Black-Side-Security Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg" />
+</head>
+<body class="dashboard-page">
+  <header class="top-bar">
+    <div class="container flex-between">
+      <a class="brand" href="index.html">
+        <span class="brand-mark"></span>
+        <div class="brand-text">
+          <strong>Black-Side-Security</strong>
+          <small>Penetration Testing | Threat Hunting | Incident Response</small>
+        </div>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="main-nav" aria-label="Primary">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="dashboard.html" class="active">Dashboard</a></li>
+          <li><a href="writeups.html">Writeups</a></li>
+          <li><a href="tools.html">Tools</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="social-row" aria-label="Social links">
+        <a href="https://github.com" class="icon-link" aria-label="GitHub" target="_blank" rel="noopener"><span class="icon icon-github"></span></a>
+        <a href="https://linkedin.com" class="icon-link" aria-label="LinkedIn" target="_blank" rel="noopener"><span class="icon icon-linkedin"></span></a>
+        <a href="https://instagram.com" class="icon-link" aria-label="Instagram" target="_blank" rel="noopener"><span class="icon icon-instagram"></span></a>
+        <a href="https://facebook.com" class="icon-link" aria-label="Facebook" target="_blank" rel="noopener"><span class="icon icon-facebook"></span></a>
+        <a href="https://wa.me/212628315771" class="icon-link" aria-label="WhatsApp" target="_blank" rel="noopener"><span class="icon icon-whatsapp"></span></a>
+      </div>
+    </div>
+  </header>
+
+  <main class="dashboard-main">
+    <section class="login-panel" aria-labelledby="login-heading">
+      <div class="container login-grid">
+        <div class="login-copy">
+          <p class="eyebrow">Simulation Only</p>
+          <h1 id="login-heading">Black-Side-Security Secure Operations Portal</h1>
+          <p>Authenticate to access red team engagements, threat intelligence feeds, and active incident response timelines. This demonstration mimics the look and feel of the production-ready dashboard.</p>
+          <ul class="login-highlights">
+            <li>Multi-factor enforced sign-in</li>
+            <li>Role-based view segmentation</li>
+            <li>Live threat hunting telemetry</li>
+          </ul>
+        </div>
+        <form class="login-card" id="simLoginForm" autocomplete="off">
+          <fieldset>
+            <legend>Operator Access</legend>
+            <label for="operatorId">Operator ID</label>
+            <input type="text" id="operatorId" name="operatorId" placeholder="BS-RED-001" required />
+            <label for="accessKey">Access Key</label>
+            <input type="password" id="accessKey" name="accessKey" placeholder="••••••••" required />
+            <label for="region">Operational Scope</label>
+            <select id="region" name="region">
+              <option value="emea">EMEA Threat Grid</option>
+              <option value="amer">AMER Forensic Cluster</option>
+              <option value="apac">APAC Recon Nexus</option>
+            </select>
+          </fieldset>
+          <button type="submit" class="btn primary">Access Dashboard</button>
+          <p class="form-note">Demo mode: no credentials stored. All interactions are simulated.</p>
+        </form>
+      </div>
+    </section>
+
+    <section class="dashboard-shell" aria-live="polite">
+      <div class="dashboard-wrapper">
+        <aside class="dashboard-sidebar">
+          <div class="sidebar-header">
+            <h2>Operator Console</h2>
+            <span class="status-pill online">Online</span>
+          </div>
+          <nav class="sidebar-nav" aria-label="Dashboard secondary">
+            <a class="active" href="#overview">Overview</a>
+            <a href="#campaigns">Campaigns</a>
+            <a href="#intel">Intel Feeds</a>
+            <a href="#response">IR Playbooks</a>
+            <a href="#reports">Reporting</a>
+          </nav>
+          <div class="sidebar-footer">
+            <p>Last sync <span class="typewriter" data-text="23s ago"></span></p>
+            <button class="btn ghost" id="logoutSim">Simulate Logout</button>
+          </div>
+        </aside>
+        <div class="dashboard-content" id="dashboardContent">
+          <header class="dashboard-header" id="overview">
+            <div>
+              <h1>Operational Situational Awareness</h1>
+              <p>Composite view aggregating offensive engagements, detection engineering pipelines, and live incident tickets.</p>
+            </div>
+            <div class="badge-row">
+              <span class="badge critical">Priority IR Active</span>
+              <span class="badge neutral">UTC+1</span>
+            </div>
+          </header>
+          <div class="card-grid three-col">
+            <article class="stat-card">
+              <h3>Writeups Published</h3>
+              <p class="stat-value" data-count="8">8</p>
+              <p class="stat-caption">Latest: Zero-click RCE in Unified Communications Suite</p>
+            </article>
+            <article class="stat-card">
+              <h3>Operational Tools</h3>
+              <p class="stat-value" data-count="26">26</p>
+              <p class="stat-caption">Core stack includes custom C2 frameworks and beacon analytics.</p>
+            </article>
+            <article class="stat-card">
+              <h3>Engagement Velocity</h3>
+              <p class="stat-value" data-count="93">93%</p>
+              <p class="stat-caption">SLA adherence across all managed detection and response engagements.</p>
+            </article>
+          </div>
+
+          <section class="panel" id="campaigns">
+            <header class="panel-header">
+              <h2>Active Campaigns</h2>
+              <span class="badge warning">Red Team</span>
+            </header>
+            <div class="panel-body two-col">
+              <article class="panel-card">
+                <h3>Operation Black Atlas</h3>
+                <p>Multi-vector offensive test targeting zero trust misconfigurations and stale OAuth grants within fintech perimeter.</p>
+                <ul>
+                  <li>Current phase: Privilege escalation</li>
+                  <li>Detection evasion score: 0.94</li>
+                  <li>Artifacts captured: 42</li>
+                </ul>
+              </article>
+              <article class="panel-card">
+                <h3>Operation Silent Reef</h3>
+                <p>Stealthy internal reconnaissance assessing lateral movement protections inside ICS/SCADA networks.</p>
+                <ul>
+                  <li>Current phase: Lateral movement</li>
+                  <li>Decoy honing: Enabled</li>
+                  <li>Integrity alerts: None</li>
+                </ul>
+              </article>
+            </div>
+          </section>
+
+          <section class="panel" id="intel">
+            <header class="panel-header">
+              <h2>Threat Intelligence Feed</h2>
+              <span class="badge info">Live</span>
+            </header>
+            <ul class="intel-feed">
+              <li><span class="dot critical"></span> Cobalt Strike beacon using DNS over HTTPS detected from IP 185.12.83.4</li>
+              <li><span class="dot warning"></span> Credential stuffing campaign targeting financial institutions across EMEA</li>
+              <li><span class="dot info"></span> New proof-of-concept for CVE-2025-1198 (VM escape) observed in dark forums</li>
+            </ul>
+          </section>
+
+          <section class="panel" id="response">
+            <header class="panel-header">
+              <h2>Incident Response Playbooks</h2>
+              <span class="badge neutral">Version 7.4</span>
+            </header>
+            <div class="panel-body grid">
+              <article class="playbook-card">
+                <h3>Ransomware Containment</h3>
+                <p>Isolation fabric deployment + golden image redeploy + privilege cascade audit.</p>
+                <button class="btn ghost">View Playbook</button>
+              </article>
+              <article class="playbook-card">
+                <h3>Insider Exfiltration</h3>
+                <p>UEBA heatmaps + data diodes + insider interview matrix.</p>
+                <button class="btn ghost">View Playbook</button>
+              </article>
+              <article class="playbook-card">
+                <h3>Cloud Account Hijack</h3>
+                <p>Just-in-time revocation + cross-region log stitching + artifact rollback.</p>
+                <button class="btn ghost">View Playbook</button>
+              </article>
+            </div>
+          </section>
+
+          <section class="panel" id="reports">
+            <header class="panel-header">
+              <h2>Engagement Reporting</h2>
+              <span class="badge neutral">All Clients</span>
+            </header>
+            <div class="report-table">
+              <div class="report-header">
+                <span>Client</span>
+                <span>Engagement Type</span>
+                <span>Status</span>
+                <span>Delivery</span>
+              </div>
+              <div class="report-row">
+                <span>Atlas FinTech</span>
+                <span>Full Red Team</span>
+                <span class="badge warning">In Review</span>
+                <span>2025-12-09</span>
+              </div>
+              <div class="report-row">
+                <span>Rabat GovSec</span>
+                <span>Threat Hunting</span>
+                <span class="badge info">Active</span>
+                <span>2025-12-13</span>
+              </div>
+              <div class="report-row">
+                <span>Northwind Logistics</span>
+                <span>Incident Response</span>
+                <span class="badge critical">Contain</span>
+                <span>2025-12-15</span>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-base single-line">
+      <small>Black-Side-Security Simulation Dashboard • Rabat, Morocco • Contact: <a href="mailto:black1black234b@gmail.com">black1black234b@gmail.com</a></small>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/dashboard.js" defer></script>
+</body>
+</html>

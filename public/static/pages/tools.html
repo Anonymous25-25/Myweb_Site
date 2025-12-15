@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Security Tools - CyberGuard</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <i class="fas fa-shield-alt"></i>
+                <span>CyberGuard</span>
+            </div>
+            <button class="nav-toggle" id="navToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/static/pages/articles.html">Articles</a></li>
+                <li><a href="/static/pages/tools.html" class="active">Tools</a></li>
+                <li><a href="/static/pages/portfolio.html">Portfolio</a></li>
+                <li><a href="/static/pages/dashboard.html">Dashboard</a></li>
+                <li><a href="/static/pages/gallery.html">Gallery</a></li>
+                <li><a href="/static/pages/about.html">About</a></li>
+                <li><a href="/static/pages/contact.html">Contact</a></li>
+                <li><a href="/static/pages/login.html" class="btn-login">Login</a></li>
+                <li>
+                    <button class="theme-toggle" id="themeToggle" title="Toggle Theme">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1><i class="fas fa-tools"></i> Cybersecurity Tools</h1>
+            <p>Essential tools for security professionals and penetration testers</p>
+        </div>
+    </section>
+
+    <!-- Tools Section -->
+    <section class="tools-section">
+        <div class="container">
+            <!-- Filter Tabs -->
+            <div class="tools-filter">
+                <button class="filter-btn active" data-category="all">
+                    <i class="fas fa-th"></i> All Tools
+                </button>
+                <button class="filter-btn" data-category="scanning">
+                    <i class="fas fa-search"></i> Scanning
+                </button>
+                <button class="filter-btn" data-category="exploitation">
+                    <i class="fas fa-bomb"></i> Exploitation
+                </button>
+                <button class="filter-btn" data-category="analysis">
+                    <i class="fas fa-chart-line"></i> Analysis
+                </button>
+                <button class="filter-btn" data-category="wireless">
+                    <i class="fas fa-wifi"></i> Wireless
+                </button>
+            </div>
+
+            <!-- Tools Grid -->
+            <div class="tools-grid">
+                <!-- Tool 1: Nmap -->
+                <div class="tool-card" data-category="scanning">
+                    <div class="tool-icon">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <h3>Nmap</h3>
+                    <span class="tool-badge">Network Scanner</span>
+                    <p>Powerful network discovery and security auditing tool. Used for network inventory, managing service upgrade schedules, and monitoring host or service uptime.</p>
+                    <ul class="tool-features">
+                        <li><i class="fas fa-check"></i> Port Scanning</li>
+                        <li><i class="fas fa-check"></i> OS Detection</li>
+                        <li><i class="fas fa-check"></i> Service Version Detection</li>
+                        <li><i class="fas fa-check"></i> Script Engine (NSE)</li>
+                    </ul>
+                    <div class="tool-footer">
+                        <span class="tool-difficulty easy">
+                            <i class="fas fa-circle"></i> Easy
+                        </span>
+                        <a href="https://nmap.org" target="_blank" class="btn btn-sm btn-primary">
+                            <i class="fas fa-external-link-alt"></i> Learn More
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Tool 2: Burp Suite -->
+                <div class="tool-card" data-category="exploitation">
+                    <div class="tool-icon">
+                        <i class="fas fa-spider"></i>
+                    </div>
+                    <h3>Burp Suite</h3>
+                    <span class="tool-badge">Web App Testing</span>
+                    <p>Integrated platform for performing security testing of web applications. Industry-standard tool for web app pen testing with powerful manual and automated features.</p>
+                    <ul class="tool-features">
+                        <li><i class="fas fa-check"></i> Intercepting Proxy</li>
+                        <li><i class="fas fa-check"></i> Web Vulnerability Scanner</li>
+                        <li><i class="fas fa-check"></i> Intruder (Fuzzing)</li>
+                        <li><i class="fas fa-check"></i> Repeater & Sequencer</li>
+                    </ul>
+                    <div class="tool-footer">
+                        <span class="tool-difficulty medium">
+                            <i class="fas fa-circle"></i> Medium
+                        </span>
+                        <a href="https://portswigger.net/burp" target="_blank" class="btn btn-sm btn-primary">
+                            <i class="fas fa-external-link-alt"></i> Learn More
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Tool 3: Wireshark -->
+                <div class="tool-card" data-category="analysis">
+                    <div class="tool-icon">
+                        <i class="fas fa-fish"></i>
+                    </div>
+                    <h3>Wireshark</h3>
+                    <span class="tool-badge">Packet Analyzer</span>
+                    <p>World's most popular network protocol analyzer. Lets you capture and interactively browse traffic running on a computer network in real-time.</p>
+                    <ul class="tool-features">
+                        <li><i class="fas fa-check"></i> Live Capture & Offline Analysis</li>
+                        <li><i class="fas fa-check"></i> Deep Protocol Inspection</li>
+                        <li><i class="fas fa-check"></i> Rich VoIP Analysis</li>
+                        <li><i class="fas fa-check"></i> Export to Multiple Formats</li>
+                    </ul>
+                    <div class="tool-footer">
+                        <span class="tool-difficulty medium">
+                            <i class="fas fa-circle"></i> Medium
+                        </span>
+                        <a href="https://www.wireshark.org" target="_blank" class="btn btn-sm btn-primary">
+                            <i class="fas fa-external-link-alt"></i> Learn More
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Tool 4: Metasploit -->
+                <div class="tool-card" data-category="exploitation">
+                    <div class="tool-icon">
+                        <i class="fas fa-bomb"></i>
+                    </div>
+                    <h3>Metasploit Framework</h3>
+                    <span class="tool-badge">Exploitation</span>
+                    <p>Most widely used penetration testing framework. Provides tools for developing, testing, and executing exploit code against remote target machines.</p>
+                    <ul class="tool-features">
+                        <li><i class="fas fa-check"></i> Exploit Development</li>
+                        <li><i class="fas fa-check"></i> Payload Generation</li>
+                        <li><i class="fas fa-check"></i> Post-Exploitation</li>
+                        <li><i class="fas fa-check"></i> Database Integration</li>
+                    </ul>
+                    <div class="tool-footer">
+                        <span class="tool-difficulty hard">
+                            <i class="fas fa-circle"></i> Advanced
+                        </span>
+                        <a href="https://www.metasploit.com" target="_blank" class="btn btn-sm btn-primary">
+                            <i class="fas fa-external-link-alt"></i> Learn More
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Tool 5: Aircrack-ng -->
+                <div class="tool-card" data-category="wireless">
+                    <div class="tool-icon">
+                        <i class="fas fa-wifi"></i>
+                    </div>
+                    <h3>Aircrack-ng</h3>
+                    <span class="tool-badge">Wireless Security</span>
+                    <p>Complete suite of tools to assess WiFi network security. Focuses on monitoring, attacking, testing, and cracking wireless networks.</p>
+                    <ul class="tool-features">
+                        <li><i class="fas fa-check"></i> Packet Capture & Export</li>
+                        <li><i class="fas fa-check"></i> WEP/WPA/WPA2 Cracking</li>
+                        <li><i class="fas fa-check"></i> Fake Access Points</li>
+                        <li><i class="fas fa-check"></i> Deauthentication Attacks</li>
+                    </ul>
+                    <div class="tool-footer">
+                        <span class="tool-difficulty medium">
+                            <i class="fas fa-circle"></i> Medium
+                        </span>
+                        <a href="https://www.aircrack-ng.org" target="_blank" class="btn btn-sm btn-primary">
+                            <i class="fas fa-external-link-alt"></i> Learn More
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Tool 6: John the Ripper -->
+                <div class="tool-card" data-category="exploitation">
+                    <div class="tool-icon">
+                        <i class="fas fa-key"></i>
+                    </div>
+                    <h3>John the Ripper</h3>
+                    <span class="tool-badge">Password Cracker</span>
+                    <p>Fast password cracker supporting hundreds of hash and cipher types. Can automatically detect password hash types and includes a customizable cracker.</p>
+                    <ul class="tool-features">
+                        <li><i class="fas fa-check"></i> Dictionary Attacks</li>
+                        <li><i class="fas fa-check"></i> Brute Force</li>
+                        <li><i class="fas fa-check"></i> Rainbow Tables</li>
+                        <li><i class="fas fa-check"></i> Multi-Platform Support</li>
+                    </ul>
+                    <div class="tool-footer">
+                        <span class="tool-difficulty easy">
+                            <i class="fas fa-circle"></i> Easy
+                        </span>
+                        <a href="https://www.openwall.com/john/" target="_blank" class="btn btn-sm btn-primary">
+                            <i class="fas fa-external-link-alt"></i> Learn More
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Tool 7: Nikto -->
+                <div class="tool-card" data-category="scanning">
+                    <div class="tool-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3>Nikto</h3>
+                    <span class="tool-badge">Web Scanner</span>
+                    <p>Open source web server scanner which performs comprehensive tests against web servers for multiple items including dangerous files and outdated versions.</p>
+                    <ul class="tool-features">
+                        <li><i class="fas fa-check"></i> 6700+ Potential Vulnerabilities</li>
+                        <li><i class="fas fa-check"></i> Server Misconfiguration</li>
+                        <li><i class="fas fa-check"></i> Default Files Detection</li>
+                        <li><i class="fas fa-check"></i> Outdated Components</li>
+                    </ul>
+                    <div class="tool-footer">
+                        <span class="tool-difficulty easy">
+                            <i class="fas fa-circle"></i> Easy
+                        </span>
+                        <a href="https://cirt.net/Nikto2" target="_blank" class="btn btn-sm btn-primary">
+                            <i class="fas fa-external-link-alt"></i> Learn More
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Tool 8: OWASP ZAP -->
+                <div class="tool-card" data-category="scanning">
+                    <div class="tool-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3>OWASP ZAP</h3>
+                    <span class="tool-badge">Security Testing</span>
+                    <p>Zed Attack Proxy is an easy to use integrated penetration testing tool for finding vulnerabilities in web applications during development and testing.</p>
+                    <ul class="tool-features">
+                        <li><i class="fas fa-check"></i> Active & Passive Scanning</li>
+                        <li><i class="fas fa-check"></i> Automated Spidering</li>
+                        <li><i class="fas fa-check"></i> Fuzzing</li>
+                        <li><i class="fas fa-check"></i> API Testing</li>
+                    </ul>
+                    <div class="tool-footer">
+                        <span class="tool-difficulty easy">
+                            <i class="fas fa-circle"></i> Easy
+                        </span>
+                        <a href="https://www.zaproxy.org" target="_blank" class="btn btn-sm btn-primary">
+                            <i class="fas fa-external-link-alt"></i> Learn More
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Tool 9: Sqlmap -->
+                <div class="tool-card" data-category="exploitation">
+                    <div class="tool-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3>Sqlmap</h3>
+                    <span class="tool-badge">SQL Injection</span>
+                    <p>Automatic SQL injection and database takeover tool. Supports six SQL injection techniques and can directly connect to databases without passing through SQL injection.</p>
+                    <ul class="tool-features">
+                        <li><i class="fas fa-check"></i> Multiple DB Support</li>
+                        <li><i class="fas fa-check"></i> Automatic Detection</li>
+                        <li><i class="fas fa-check"></i> Database Fingerprinting</li>
+                        <li><i class="fas fa-check"></i> Data Extraction</li>
+                    </ul>
+                    <div class="tool-footer">
+                        <span class="tool-difficulty medium">
+                            <i class="fas fa-circle"></i> Medium
+                        </span>
+                        <a href="https://sqlmap.org" target="_blank" class="btn btn-sm btn-primary">
+                            <i class="fas fa-external-link-alt"></i> Learn More
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Tool 10: Hashcat -->
+                <div class="tool-card" data-category="exploitation">
+                    <div class="tool-icon">
+                        <i class="fas fa-hashtag"></i>
+                    </div>
+                    <h3>Hashcat</h3>
+                    <span class="tool-badge">Password Recovery</span>
+                    <p>World's fastest password recovery tool. Supports five unique modes of attack for over 300 highly-optimized hashing algorithms using CPU, GPU, and APU.</p>
+                    <ul class="tool-features">
+                        <li><i class="fas fa-check"></i> GPU Acceleration</li>
+                        <li><i class="fas fa-check"></i> 300+ Hash Types</li>
+                        <li><i class="fas fa-check"></i> Multiple Attack Modes</li>
+                        <li><i class="fas fa-check"></i> Distributed Cracking</li>
+                    </ul>
+                    <div class="tool-footer">
+                        <span class="tool-difficulty medium">
+                            <i class="fas fa-circle"></i> Medium
+                        </span>
+                        <a href="https://hashcat.net/hashcat/" target="_blank" class="btn btn-sm btn-primary">
+                            <i class="fas fa-external-link-alt"></i> Learn More
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Tool 11: Hydra -->
+                <div class="tool-card" data-category="exploitation">
+                    <div class="tool-icon">
+                        <i class="fas fa-dragon"></i>
+                    </div>
+                    <h3>Hydra</h3>
+                    <span class="tool-badge">Brute Force</span>
+                    <p>Parallelized login cracker which supports numerous protocols to attack. Very fast and flexible, with new modules easy to add for various protocols.</p>
+                    <ul class="tool-features">
+                        <li><i class="fas fa-check"></i> 50+ Protocols Supported</li>
+                        <li><i class="fas fa-check"></i> Parallel Connections</li>
+                        <li><i class="fas fa-check"></i> Custom Wordlists</li>
+                        <li><i class="fas fa-check"></i> Resume Support</li>
+                    </ul>
+                    <div class="tool-footer">
+                        <span class="tool-difficulty easy">
+                            <i class="fas fa-circle"></i> Easy
+                        </span>
+                        <a href="https://github.com/vanhauser-thc/thc-hydra" target="_blank" class="btn btn-sm btn-primary">
+                            <i class="fas fa-external-link-alt"></i> Learn More
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Tool 12: Snort -->
+                <div class="tool-card" data-category="analysis">
+                    <div class="tool-icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h3>Snort</h3>
+                    <span class="tool-badge">IDS/IPS</span>
+                    <p>Free open source network intrusion prevention system capable of performing real-time traffic analysis and packet logging on IP networks.</p>
+                    <ul class="tool-features">
+                        <li><i class="fas fa-check"></i> Real-Time Traffic Analysis</li>
+                        <li><i class="fas fa-check"></i> Protocol Analysis</li>
+                        <li><i class="fas fa-check"></i> Content Matching</li>
+                        <li><i class="fas fa-check"></i> Flexible Rules Engine</li>
+                    </ul>
+                    <div class="tool-footer">
+                        <span class="tool-difficulty hard">
+                            <i class="fas fa-circle"></i> Advanced
+                        </span>
+                        <a href="https://www.snort.org" target="_blank" class="btn btn-sm btn-primary">
+                            <i class="fas fa-external-link-alt"></i> Learn More
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <div class="footer-brand">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>CyberGuard</span>
+                    </div>
+                    <p>Professional cybersecurity solutions protecting organizations worldwide.</p>
+                    <div class="social-links">
+                        <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" title="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="#" title="Discord"><i class="fab fa-discord"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="/index.html">Home</a></li>
+                        <li><a href="/static/pages/articles.html">Articles</a></li>
+                        <li><a href="/static/pages/tools.html">Tools</a></li>
+                        <li><a href="/static/pages/portfolio.html">Portfolio</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="/static/pages/portfolio.html">Penetration Testing</a></li>
+                        <li><a href="/static/pages/tools.html">Security Audits</a></li>
+                        <li><a href="/static/pages/contact.html">Consulting</a></li>
+                        <li><a href="/static/pages/contact.html">Training</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> info@cyberguard.com</li>
+                        <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+                        <li><i class="fas fa-map-marker-alt"></i> San Francisco, CA</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 CyberGuard. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/static/js/main.js"></script>
+    <script src="/static/js/tools.js"></script>
+</body>
+</html>
