@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/assets/images/favicoin.png" type="image/x-icon">
+    <title>Red Team Access Panel | Secure Login</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <canvas id="circuitCanvas"></canvas>
+    <section class="login-page">
+        <div class="login-container">
+            <div class="welcome-panel">
+                <div class="welcome-content">
+                    <div class="logo-text-login">🔴 RED TEAM ACCESS</div>
+                    <h1 class="welcome-title">Hello, welcome!</h1>
+                    <p class="welcome-description">
+                        Secure authentication panel for authorized personnel only. 
+                        This system is monitored. Unauthorized access attempts will be logged and investigated.
+                    </p>
+                    <button class="btn-outline" onclick="window.location.href='index.html'">View Portfolio</button>
+                </div>
+            </div>
+            <div class="login-panel">
+                <h2>Login</h2>
+                <form class="login-form" id="loginForm">
+                    <div class="form-group">
+                        <label for="email">Email address</label>
+                        <input type="email" id="email" name="email" placeholder="your.email@domain.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                    </div>
+                    <div class="form-options">
+                        <label class="remember-me">
+                            <input type="checkbox" name="remember">
+                            <span>Remember me</span>
+                        </label>
+                        <a href="#" class="forgot-password">Forgot password?</a>
+                    </div>
+                    <button type="submit" class="btn-login">Login</button>
+                    <div class="signup-prompt">
+                        <p>Not a member yet?</p>
+                        <button type="button" class="btn-signup">Sign up</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <script src="script.js"></script>
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('🔐 Authentication system is for demonstration purposes only.');
+        });
+    </script>
+</body>
+</html>
